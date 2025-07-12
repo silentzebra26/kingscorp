@@ -58,21 +58,6 @@ body {
 }
 
 
-.cart-link {
-  display: flex;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-  margin-left: 20px;
-  transition: opacity 0.3s ease;
-}
-
-.cart-link:hover,
-.cart-link:focus {
-  opacity: 0.7;
-}
-
 
 .main-container {
   background-color: blue;

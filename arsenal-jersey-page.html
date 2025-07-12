@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arsenal Adult 2024-25 Home Jersey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="kingscorp.png" alt="WESTON Logo" />
+    </div>
+    <div class="navlinks">
+      <a href="">Home</a>
+      <a href="">Shop</a>
+      <a href="">About</a>
+      <a href="">Contact</a>
+    </div>
+  </div>
+  <div class="organize">
+    <img src="arsenaljersey.webp" width="512" height="512" class="image-container" alt="ManUJersey" />
+    <div>
+      <div class="brand-name">Adiddas</div>
+      <br />
+     <p class="product-name">Arsenal Adult 2024-25 Home Jersey</p>
+	 <br>
+      <div class="price">$115.00</div>
+      <br>
+      <form action="checkoutpage.html" method="post">
+ 						<div class="grid2x7">
+								<div><input type="radio" name="sizing" id="XS" /><label for="XS">XS</label></div>
+							<div><input type="radio" name="sizing" id="S" /><label for="S">S</label></div>
+							<div><input type="radio" name="sizing" id="M" /><label for="M">M</label></div>
+							<div><input type="radio" name="sizing" id="L" /><label for="L">L</label></div>
+							<div><input type="radio" name="sizing" id="XL" /><label for="XL">XL</label></div>
+							<div><input type="radio" name="sizing" id="2XL" /><label for="2XL">2XL</label></div>
+							<div><input type="radio" name="sizing" id="3XL" /><label for="3XL">3XL</label></div>
+							<div><input type="radio" name="sizing" id="4XL" /><label for="4XL">4XL</label></div>
+							<div><input type="radio" name="sizing" id="5XL" /><label for="5XL">5XL</label></div>
+							<div><input type="radio" name="sizing" id="6XL" /><label for="6XL">6XL</label></div>
+						</div>
+
+        <div class="counter">
+          <span class="down" onclick="decreaseCount(event, this)">-</span>
+			<input type="text" value="1" />
+          <span class="up" onclick="increaseCount(event, this)">+</span>
+        </div>
+	
+	
+        <br />
+			<button type="submit" class="buy-button">Buy now</button>
+      </form>
+
+      <br>
+	  <br>
+      <div style="font-weight:bold;font-size:1.2em;">DESCRIPTION</div>
+      <br >
+	<br>
+				An Arsenal fan jersey in their famous home colours, made with recycled materials.
+	<br>
+	<br>
+				A clean look for a young squad who have their sights set on the very top. Standing out over<br>
+				those timeless home colours, a simple embroidered crest is the star of this Arsenal jersey<br>
+				from adidas. Moisture-managing AEROREADY and soft interlock fabric combine to keep<br>
+				football fans comfortable while they enjoy the ride.This product is made with 100%<Br>
+				recycled materials. By reusing materials that have already been created, we help to reduce<br>
+				waste and our reliance on finite resources and reduce the footprint of the products we<br>
+				make.<br>
+  <script>
+    function increaseCount(e, el) {
+      const input = el.previousElementSibling;
+      let value = parseInt(input.value, 10);
+      input.value = isNaN(value) ? 1 : value + 1;
+    }
+
+    function decreaseCount(e, el) {
+      const input = el.nextElementSibling;
+      let value = parseInt(input.value, 10);
+      if (!isNaN(value) && value > 1) {
+        input.value = value - 1;
+      }
+    }
+  </script>
+</body>
+</html>

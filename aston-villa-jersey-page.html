@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aston Villa FC Adult 2024-25 Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="kingscorp.png" alt="WESTON Logo" />
+    </div>
+    <div class="navlinks">
+      <a href="">Home</a>
+      <a href="">Shop</a>
+      <a href="">About</a>
+      <a href="">Contact</a>
+    </div>
+  </div>
+  <div class="organize">
+    <img src="astonvillajersey.webp" width="512" height="512" class="image-container" alt="AstonVillaJersey" />
+    <div>
+      <div class="brand-name">Adiddas</div>
+      <br />
+     <p class="product-name">Aston Villa FC Adult 2024-25 Home</p>
+	 <br>
+      <div class="price">$115.00</div>
+      <br>
+      <form action="checkoutpage.html" method="post">
+ 						<div class="grid2x7">
+								<div><input type="radio" name="sizing" id="XS" /><label for="XS">XS</label></div>
+							<div><input type="radio" name="sizing" id="S" /><label for="S">S</label></div>
+							<div><input type="radio" name="sizing" id="M" /><label for="M">M</label></div>
+							<div><input type="radio" name="sizing" id="L" /><label for="L">L</label></div>
+							<div><input type="radio" name="sizing" id="XL" /><label for="XL">XL</label></div>
+							<div><input type="radio" name="sizing" id="2XL" /><label for="2XL">2XL</label></div>
+							<div><input type="radio" name="sizing" id="3XL" /><label for="3XL">3XL</label></div>
+							<div><input type="radio" name="sizing" id="4XL" /><label for="4XL">4XL</label></div>
+							<div><input type="radio" name="sizing" id="5XL" /><label for="5XL">5XL</label></div>
+							<div><input type="radio" name="sizing" id="6XL" /><label for="6XL">6XL</label></div>
+						</div>
+
+        <div class="counter">
+          <span class="down" onclick="decreaseCount(event, this)">-</span>
+			<input type="text" value="1" />
+          <span class="up" onclick="increaseCount(event, this)">+</span>
+        </div>
+	
+	
+        <br />
+			<button type="submit" class="buy-button">Buy now</button>
+      </form>
+
+      <br>
+	  <br>
+      <div style="font-weight:bold;font-size:1.2em;">DESCRIPTION</div>
+	<br>
+				An Aston Villa FC home jersey for proud fans, made with recycled materials.
+	<br>
+	<br>
+				Celebrating the start. Aston Villa FC's first-ever adidas home kit marks the club's 150th<br>
+				anniversary with a timeless design and an "AV 150" sign-off. The narrow stripes on this<br>
+				football jersey's flat-knit collar are a subtle nod to the club's 1874 shirt design. That woven<br>
+				badge, on the other hand, signals a brand-new chapter. Moisture-managing AEROREADY<Br>
+				keeps fans comfortable in their colours.<br>
+				<br>
+				This product is made with 100% recycled materials. By reusing materials that have already<br>
+				been created, we help to reduce waste and our reliance on finite resources and reduce the<br>
+				footprint of the products we make.<br>	
+  <script>
+    function increaseCount(e, el) {
+      const input = el.previousElementSibling;
+      let value = parseInt(input.value, 10);
+      input.value = isNaN(value) ? 1 : value + 1;
+    }
+
+    function decreaseCount(e, el) {
+      const input = el.nextElementSibling;
+      let value = parseInt(input.value, 10);
+      if (!isNaN(value) && value > 1) {
+        input.value = value - 1;
+      }
+    }
+  </script>
+</body>
+</html>

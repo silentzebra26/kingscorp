@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mercurial Zoom Vapor 16 Academy FG/MG 'Mad Ambition Pack'</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="kingscorp.png" alt="WESTON Logo" />
+    </div>
+    <div class="navlinks">
+      <a href="">Home</a>
+      <a href="">Boots</a>
+      <a href="">Apparel</a>
+      <a href="">About</a>
+      <a href="">Contact</a>
+    </div>
+  </div>
+
+  <div class="organize">
+    <img src="mercurialzoomvapor.webp" width="512" height="512" class="image-container" alt="NikeMercurialZoomVapor" />
+    <div>
+      <div class="brand-name">Nike</div>
+      <br />
+     <p class="product-name">Mercurial Zoom Vapor 16 Academy FG/MG<br> 
+											'Mad Ambition Pack'</p>
+		</p>
+      <div class="price">$109.00</div>
+      <br>
+      <form action="checkoutpage.html" method="post">
+ 						<div class="grid2x7">
+							<div><input type="radio" name="sizing" id="US 6" /><label for="US 6"> US 6</label></div>
+							<div><input type="radio" name="sizing" id="US 6.5" /><label for="US 6.5"> US 6.5</label></div>
+							<div><input type="radio" name="sizing" id="US 7" /><label for="US 7"> US 7</label></div>
+							<div><input type="radio" name="sizing" id="US 7.5" /><label for="US 7.5"> US 7.5</label></div>
+							<div><input type="radio" name="sizing" id="US 8" /><label for="US 8"> US 8</label></div>
+							<div><input type="radio" name="sizing" id="US 8.5" /><label for="US8.5" >US 8.5</label></div>
+							<div><input type="radio" name="sizing" id="US 9" /><label for="US 9"> US 9</label></div>
+							<div><input type="radio" name="sizing" id="US 9.5" /><label for="US 9.5"> US 9.5</label></div>
+							<div><input type="radio" name="sizing" id="US 10" /><label for="US 10"> US 10</label></div>
+							<div><input type="radio" name="sizing" id="US 10.5" /><label for="US 10.5"> US 10.5</label></div>
+							<div><input type="radio" name="sizing" id="US 11" /><label for="US 11"> US 11</label></div>
+							<div><input type="radio" name="sizing" id="US 11.5" /><label for="US 11.5"> US 11.5</label></div>
+							<div><input type="radio" name="sizing" id="US 12" /><label for="US12"> US 12</label></div>
+						</div>
+
+        <div class="counter">
+          <span class="down" onclick="decreaseCount(event, this)">-</span>
+			<input type="text" value="1" />
+          <span class="up" onclick="increaseCount(event, this)">+</span>
+        </div>
+	
+	
+        <br />
+			<button type="submit" class="buy-button">Buy now</button>
+      </form>
+
+      <br>
+	  <br>
+      <div style="font-weight:bold;font-size:1.2em;">DESCRIPTION</div>
+	<br>
+				Nike Mercurial Vapor 16 Academy MG Low-Top Soccer Cleats Looking to take your speed to<br>
+				the next level? We made these Academy cleats with an improved heel Air Zoom unit. It<br>
+				gives you the propulsive feel needed to break through the back line. The result is the most<br>
+				responsive Mercurial we've ever made, so you can dictate pace and tempo all match long.<br>
+				Amplified Touch The upper is made of NikeSkin with embedded chevrons, which helps<Br>
+				provide ball control and truly gives you a feeling of barefoot soccer. Fast Traction The<br>
+				wave-like traction pattern is a series of cascading studs, so it engages more surface area<br>
+				of the Air Zoom unit while also providing the appropriate amount of grip. The biggest stud<br>
+				is the same height as our traditional middle studs, so traction is not compromised. We<br>
+				paired the wave-like traction with evolved chevron and blade studs to help you stop when<br>
+				making quick cuts. Snug Fit We’ve upgraded the stretch mesh from the previous<br>
+				generation to an adaptable knit that offers flexibility, provides support and brings you<br>
+				closer to the ball. More Details<br>	
+	<br>
+			<div style="font-weight:bold">More Details</div>
+				<ul>
+					<li>For use on natural and synthetic surfaces</li>
+					<li>Cushioned insole</li>
+				</ul>
+			</div>
+  <script>
+    function increaseCount(e, el) {
+      const input = el.previousElementSibling;
+      let value = parseInt(input.value, 10);
+      input.value = isNaN(value) ? 1 : value + 1;
+    }
+
+    function decreaseCount(e, el) {
+      const input = el.nextElementSibling;
+      let value = parseInt(input.value, 10);
+      if (!isNaN(value) && value > 1) {
+        input.value = value - 1;
+      }
+    }
+  </script>
+</body>
+</html>

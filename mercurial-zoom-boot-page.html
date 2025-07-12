@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mercurial Zoom Superfly 10 Elite SE FG - Air Max 9</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="kingscorp.png" alt="WESTON Logo" />
+    </div>
+    <div class="navlinks">
+      <a href="">Home</a>
+      <a href="">Boots</a>
+      <a href="">Apparel</a>
+      <a href="">About</a>
+      <a href="">Contact</a>
+    </div>
+    <a href="cart.html">
+    </a>
+  </div>
+
+  <div class="organize">
+    <img src="mercurialzoom.webp" width="512" height="512" class="image-container" alt="Nike Mercurial Zoom Superfly" />
+    <div>
+      <div class="brand-name">Nike</div>
+      <br />
+      <p class="product-name">
+        Mercurial Zoom Superfly 10 Elite SE FG -<br/>
+        Air Max 95
+		</p>
+      <div class="price">$349.00</div>
+      <br>
+      <form action="checkoutpage.html" method="post">
+        <div class="grid2x5">
+		<div><input type="radio" name="sizing" id="US 8" /><label for="US 8">&nbsp;US 8</label></div>
+		<div><input type="radio" name="sizing" id="US8.5" /><label for="US 8.5">&nbsp;US 8.5</label></div>
+		<div><input type="radio" name="sizing" id="US 9" /><label for="US 9">&nbsp;US 9</label></div>
+		<div><input type="radio" name="sizing" id="US 9.5" /><label for="US 9.5">&nbsp;US 9.5</label></div>
+		<div><input type="radio" name="sizing" id="US 10" /><label for="US 10">&nbsp;US 10</label></div>
+		<div><input type="radio" name="sizing" id="US10.5" /><label for="US 10.5">&nbsp;US 10.5</label></div>
+		<div><input type="radio" name="sizing" id="US 11" /><label for="US 11">&nbsp;US 11</label></div>
+			</div>
+
+        <div class="counter">
+          <span class="down" onclick="decreaseCount(event, this)">-</span>
+			<input type="text" value="1" />
+          <span class="up" onclick="increaseCount(event, this)">+</span>
+        </div>
+	
+	
+        <br />
+			<button type="submit" class="buy-button">Buy now</button>
+      </form>
+
+      <br>
+	  <br>
+      <div style="font-weight:bold;font-size:1.2em;">DESCRIPTION</div>
+      <br />
+      <p>
+			Nike Mercurial Superfly 10 Elite x Air Max 95 SE<br>
+			FG High-Top Soccer Cleats<br>
+			As we celebrate the 30th anniversary of the Air Max 95, it’s only right we toast the rarefied<br>
+			AIR allegiance between the lifestyle icon and meteoric Mercurial. This special Superfly 10<br>
+			Elite nods to our most iconic Air Max colorway and combines it with our most responsive<br>
+			Mercurial ever. From the glossy heel to the embroidered Swoosh logo to the plate graphic,<br>
+			this mashup matches the original shoe worn by lightning-fast superstars and one of the<br>
+			greatest teams ever.
+      </p>
+
+      <br>
+      <div class="header2">Fast Traction</div>
+       <p>
+			The wave-like traction pattern works with the Air Zoom unit to unlock your blazing speed.<br>
+			It takes up more surface area of the Air Zoom unit compared to the Superfly 9 while<br>
+			providing the right amount of grip. It combines with chevron and blade studs to help you<br>
+			stop when making cuts.
+      </p>
+
+      <br />
+       <div class="header2">Exceptional Touch</div>
+      <p>
+			Nike Gripknit, a sticky material that provides exceptional touch to the ball, gives you the<br>
+			control you need when dribbling at high speeds. It provides equal grip in wet or dry<br>
+			conditions.
+      </p>
+
+      <br>
+       <div class="header2">Snug Fit</div>
+      <p>
+			The Flyknit upper, engineered for the game's fastest players, provides a sock-like fit. It<br>
+			combines with Gripknit to form the thinnest Mercurial upper to date, bringing you closer to<br>
+			the ball and shortening break-in time. The Dynamic Fit collar wraps your ankle in soft,<br>
+			stretchy fabric for a secure feel.
+      </p>
+
+      <br>
+      <div class="header2">More Details</div>
+      <ul>
+			<li>For use on dry, natural-grass fields</li>
+			<li>Cushioned sockliner</li>
+      </ul>
+    </div>
+	</div>
+
+  <script>
+    function increaseCount(e, el) {
+      const input = el.previousElementSibling;
+      let value = parseInt(input.value, 10);
+      input.value = isNaN(value) ? 1 : value + 1;
+    }
+
+    function decreaseCount(e, el) {
+      const input = el.nextElementSibling;
+      let value = parseInt(input.value, 10);
+      if (!isNaN(value) && value > 1) {
+        input.value = value - 1;
+      }
+    }
+  </script>
+</body>
+</html>

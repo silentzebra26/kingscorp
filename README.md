@@ -1,2 +1,0 @@
-# kingscorp
-TEST

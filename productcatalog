@@ -89,7 +89,7 @@
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 25px;
     }
 
@@ -110,8 +110,8 @@
     .product img {
       width: 100%;
       height: 200px;
-      object-fit: contain;       /* changed from cover to contain */
-      background-color: #eee;    /* adds filler background */
+      object-fit: contain;
+      background-color: #eee;
       border-radius: 4px;
       margin-bottom: 10px;
     }
@@ -145,7 +145,6 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <div class="navbar">
     <div class="logo">
       <img src="kingscorpp.png" alt="Kings Corp Logo" />
@@ -164,68 +163,62 @@
     </a>
   </div>
 
-  <!-- PRODUCT CATALOGUE -->
   <div class="main">
     <h2>Football Gear Catalogue</h2>
     <div class="product-grid">
 
-      <!-- Product 1 -->
+      <!-- Row 1: Kits -->
       <div class="product">
-        <img src="images/manu.jpg" alt="Man Utd Kit">
-        <p>Man Utd 2025-26 Home Kit</p>
-        <p class="price">$115</p>
+        <img src="man_u.jpg" alt="Man Utd Kit">
+        <p>Manchester United 2024-25 LS Home Jersey</p>
+        <p class="price">$199.90</p>
         <button class="cart-icon">🛒 Add to Cart</button>
       </div>
 
-      <!-- Product 2 -->
       <div class="product">
-        <img src="images/mercurial.jpg" alt="Nike Mercurial Boots">
-        <p>Nike Mercurial Superfly</p>
-        <p class="price">$270</p>
+        <img src="arsenal.jpg" alt="Arsenal">
+        <p>Arsenal Adult 2024-25 Home Jersey</p>
+        <p class="price">$115.00</p>
         <button class="cart-icon">🛒 Add to Cart</button>
       </div>
 
-      <!-- Product 3 -->
       <div class="product">
-        <img src="images/manckit.jpg" alt="Man City Kit">
-        <p>Man City 2025-26 Home Kit</p>
-        <p class="price">$100</p>
+        <img src="AVL.jpg" alt="AVL">
+        <p>Aston Villa 2024-25 Home Jersey</p>
+        <p class="price">$115.00</p>
         <button class="cart-icon">🛒 Add to Cart</button>
       </div>
 
-      <!-- Product 4 -->
+      <!-- Row 2: Boots -->
       <div class="product">
-        <img src="images/arsenal.jpg" alt="Arsenal Kit">
-        <p>Arsenal 2025-26 Home Kit</p>
-        <p class="price">$110</p>
+        <img src="mercurial.jpg" alt="mercurial">
+        <p>Mercurial Zoom Superfly 10 Elite SE FG - Air Max 95</p>
+        <p class="price">$349.00</p>
         <button class="cart-icon">🛒 Add to Cart</button>
       </div>
 
-      <!-- Product 5 -->
       <div class="product">
-        <img src="images/puma_boots.jpg" alt="Puma Boots">
-        <p>Puma Ultra Speed Boots</p>
-        <p class="price">$190</p>
+        <img src="mercurials.jpg" alt="mercurials">
+        <p>Mercurial Zoom Vapor 16 Academy FG/MG 'Mad Ambition Pack'</p>
+        <p class="price">$109</p>
         <button class="cart-icon">🛒 Add to Cart</button>
       </div>
 
-      <!-- Product 6 -->
       <div class="product">
-        <img src="images/liverpool.jpg" alt="Liverpool Kit">
+        <img src="mbappe.jpg" alt="mbappe">
+        <p>Mercurial Zoom Vapor 16 Pro FG 'Kylan Mbappe'</p>
+        <p class="price">$219.00</p>
+        <button class="cart-icon">🛒 Add to Cart</button>
+      </div>
+
+      <!-- Row 3: Extras / Mixed -->
+      <div class="product">
+        <img src="images/liverpool.jpg" alt="Liverpool">
         <p>Liverpool 2025-26 Home Kit</p>
         <p class="price">$105</p>
         <button class="cart-icon">🛒 Add to Cart</button>
       </div>
 
-      <!-- Product 7 -->
-      <div class="product">
-        <img src="images/adidas_boots.jpg" alt="Adidas Predator">
-        <p>Adidas Predator Accuracy+</p>
-        <p class="price">$250</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
-      </div>
-
-      <!-- Product 8 -->
       <div class="product">
         <img src="images/chelsea.jpg" alt="Chelsea Kit">
         <p>Chelsea 2025-26 Away Kit</p>
@@ -233,11 +226,10 @@
         <button class="cart-icon">🛒 Add to Cart</button>
       </div>
 
-      <!-- Product 9 -->
       <div class="product">
-        <img src="images/goalkeeper_gloves.jpg" alt="Goalkeeper Gloves">
-        <p>Pro Goalkeeper Gloves</p>
-        <p class="price">$60</p>
+        <img src="images/arsenal.jpg" alt="Arsenal Kit">
+        <p>Arsenal 2025-26 Home Kit</p>
+        <p class="price">$110</p>
         <button class="cart-icon">🛒 Add to Cart</button>
       </div>
 

@@ -2,239 +2,129 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Kings Corp Catalogue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback | Western Corp</title>
   <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f0f0;
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: black;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 40px;
-      height: 60px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-
-    .navbar .logo img {
-      height: 40px;
-      width: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-      padding: 8px 0;
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      background: white;
-      left: 0;
-      bottom: -4px;
-      transition: 0.3s ease width;
-    }
-
-    .nav-links a:hover::after,
-    .nav-links a:focus::after {
-      width: 100%;
-    }
-
-    .cart-link {
-      display: flex;
-      align-items: center;
-      padding-left: 15px;
-    }
-
-    .cart-link svg {
-      fill: white;
-      transition: transform 0.2s ease;
-    }
-
-    .cart-link:hover svg {
-      transform: scale(1.1);
-    }
-
-    .main {
-      background-color: white;
-      margin: 40px auto;
-      padding: 40px 20px;
-      max-width: 1100px;
-      border-radius: 10px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    }
-
-    .main h2 {
-      text-align: center;
-      color: #222;
-      margin-bottom: 30px;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .product {
-      background: #f9f9f9;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 15px;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-
-    .product:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .product img {
-      width: 100%;
-      height: 200px;
-      object-fit: contain;
-      background-color: #eee;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
-
-    .product p {
-      margin: 5px 0;
+      background-color: #f4f4f4;
       color: #333;
     }
 
-    .price {
-      font-weight: bold;
-      color: #111;
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
     }
 
-    .cart-icon {
-      margin-top: 10px;
-      padding: 10px 15px;
-      font-size: 16px;
-      background-color: #111;
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-right: auto;
+    }
+
+    nav {
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      color: #222;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.9rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      background-color: #fafafa;
+      transition: border 0.2s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #888;
+      outline: none;
+      background-color: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .full-width {
+      grid-column: span 2;
+    }
+
+    .submit-btn {
+      background-color: #1a1a1a;
       color: white;
+      padding: 1rem;
       border: none;
       border-radius: 6px;
+      font-size: 1rem;
       cursor: pointer;
-      transition: background 0.3s;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
     }
 
-    .cart-icon:hover {
-      background-color: #444;
+    .submit-btn:hover {
+      background-color: #333;
+    }
+
+    @media (max-width: 700px) {
+      .full-width {
+        grid-column: span 1;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="navbar">
-    <div class="logo">
-      <img src="kingscorpp.png" alt="Kings Corp Logo" />
-    </div>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Boots</a>
-      <a href="#">Apparel</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </div>
-    <a href="cart.html" class="cart-link" aria-label="Shopping Cart">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-        <path d="M7 18c-1.104 0-2 .897-2 2s.896 2 2 2 2-.897 2-2-.896-2-2-2zm10 0c-1.104 0-2 .897-2 2s.896 2 2 2 2-.897 2-2-.896-2-2-2zM7.2 14l.8-2h8.01l.88 2H7.2zm11.4-7H5.21l-1.2-2H1v2h2l3.6 7.59-1.35 2.44A1 1 0 0 0 5 16h14v-2h-9.42l.9-1.63h7.72l1.52-3.01-1.12-2z"/>
-      </svg>
-    </a>
-  </div>
+  <header>
+    <div class="logo">Kings Corp</div>
+    <nav>Home | Shop | Contact</nav>
+  </header>
 
-  <div class="main">
-    <h2>Football Gear Catalogue</h2>
-    <div class="product-grid">
-
-      <!-- Row 1: Kits -->
-      <div class="product">
-        <img src="man_u.jpg" alt="Man Utd Kit">
-        <p>Manchester United 2024-25 LS Home Jersey</p>
-        <p class="price">$199.90</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <img src="arsenal.jpg" alt="Arsenal">
-        <p>Arsenal Adult 2024-25 Home Jersey</p>
-        <p class="price">$115.00</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <img src="AVL.jpg" alt="AVL">
-        <p>Aston Villa 2024-25 Home Jersey</p>
-        <p class="price">$115.00</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
-      </div>
-
-      <!-- Row 2: Boots -->
-      <div class="product">
-        <img src="mercurial.jpg" alt="mercurial">
-        <p>Mercurial Zoom Superfly 10 Elite SE FG - Air Max 95</p>
-        <p class="price">$349.00</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <img src="mercurials.jpg" alt="mercurials">
-        <p>Mercurial Zoom Vapor 16 Academy FG/MG 'Mad Ambition Pack'</p>
-        <p class="price">$109</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <img src="mbappe.jpg" alt="mbappe">
-        <p>Mercurial Zoom Vapor 16 Pro FG 'Kylan Mbappe'</p>
-        <p class="price">$219.00</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
-      </div>
-
-      <!-- Row 3: Extras / Mixed -->
-      <div class="product">
-        <img src="images/liverpool.jpg" alt="Liverpool">
-        <p>Liverpool 2025-26 Home Kit</p>
-        <p class="price">$105</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <img src="images/chelsea.jpg" alt="Chelsea Kit">
-        <p>Chelsea 2025-26 Away Kit</p>
-        <p class="price">$99</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <img src="images/arsenal.jpg" alt="Arsenal Kit">
-        <p>Arsenal 2025-26 Home Kit</p>
-        <p class="price">$110</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
-      </div>
-
-    </div>
+  <div class="container">
+    <h2>Customer Feedback Form</h2>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="text" name="issue" placeholder="Issue" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your phone number" required>
+      <textarea name="details" placeholder="Tell us more about your issue" class="full-width" required></textarea>
+      <input type="text" name="storeContact" placeholder="Contact number of store">
+      <button type="submit" class="submit-btn full-width">Submit Feedback</button>
+    </form>
   </div>
 
 </body>
 </html>
+page4cg3html.html
+3 KB

@@ -1,0 +1,155 @@
+  * {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+    }
+	body {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		background-color: #f4f4f4;
+		color: #333;
+    }
+	
+   /* NAVIGATION BAR */
+    .navbar {
+		position: sticky;
+		top: 0;
+		background: black; /* black background */
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 40px;
+		height: 60px;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		z-index: 1000;
+    }
+
+    .logo img {
+		height: 40px;   /* control logo height */
+		width: auto;
+		display: block;
+    }
+
+    .navlinks {
+		display: flex;
+		gap: 30px;
+    }
+
+    .navlinks a {
+		text-decoration: none;
+		color: white;
+		font-weight: 600;
+		padding: 8px 0;
+		position: relative;
+    }
+	
+    .navlinks a::after {
+		content: "";
+		position: absolute;
+		width: 0%;
+		height: 2px;
+		background: white;
+		left: 0;
+		bottom: -4px;
+		transition: 0.3s ease width;
+    }
+	
+    .navlinks a:hover::after,
+    .navlinks a:focus::after {
+		width: 100%;
+    }
+	
+    /* Cart icon styles */
+    .cart-link {
+		display: flex;
+		align-items: center;
+		color: white;
+		text-decoration: none;
+		cursor: pointer;
+		margin-left: 20px;
+		transition: opacity 0.3s ease;
+    }
+	
+    .cart-link:hover,
+    .cart-link:focus {
+		opacity: 0.7;
+    }
+
+	.price {
+		font-size:3em
+	}
+	
+	.product-name {
+		font-size:2em
+	}
+	
+	.organize{
+		display:flex;
+		justify-content:center;
+		flex-wrap:wrap; 
+		margin-top:60px		
+	}
+	
+	 .image-container {
+		  max-width: 1100px;
+		  margin-right: 50px;
+		  padding: 2rem;
+		  background-color: white;
+		  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+		  border-radius: 10px;
+    }
+	
+	 .buy-button{
+		cursor: pointer;
+		font-size: 20px;
+		padding: 12px 150px;
+		border-radius: 10px;
+		color:white;
+		background-color:black
+	}
+	
+	.counter {
+		width: 110px;
+		margin:;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.counter input {
+		width: 50px;
+		border: 0;
+		line-height: 30px;
+		font-size: 20px;
+		text-align: center;
+		background:black;
+		color: #fff;
+		appearance: none;
+		outline: 0;
+	}
+	.counter span {
+		display: block;
+		font-size: 25px;
+		padding: 0 10px;
+		cursor: pointer;
+		color:black;
+		user-select: none;
+		background-color:white;
+		border-radius:10px
+	}
+
+	.grid2x7{
+		display:grid;
+		grid-template-rows:45px 45px ;
+		grid-template-columns:80px 80px 80px 80px 80px 80px 80px ;
+	}
+	.grid2x5{
+		display:grid;
+		grid-template-rows:45px 45px ;
+		grid-template-columns:80px 80px 80px 80px 80px ;
+	}
+	.header2{
+		font-weight:bold
+	}
+	.brand-name{
+		font-weight:bold;
+		font-size:1.5em;
+	}

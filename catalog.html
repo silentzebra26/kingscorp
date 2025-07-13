@@ -141,6 +141,25 @@
     .cart-icon:hover {
       background-color: #444;
     }
+    .product a.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.product a.product-link .cart-icon {
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.product a.product-link .cart-icon:hover {
+  background-color: #444;
+}
   </style>
 </head>
 <body>
@@ -167,49 +186,59 @@
     <div class="product-grid">
 
       <!-- Row 1: Kits -->
-      <div class="product">
-        <a href="Manchester-united-jersey-page.html">
-        <img src="catalog photos/man_u.jpg" alt="Man Utd Kit">
-        </a>
-        <p>Manchester United 2024-25 LS Home Jersey</p>
-        <p class="price">$199.90</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
-      </div>
+     <div class="product">
+  <a href="Manchester-united-jersey-page.html" class="product-link">
+    <img src="catalog photos/man_u.jpg" alt="Man Utd Kit">
+    <p>Manchester United 2024-25 LS Home Jersey</p>
+    <p class="price">$199.90</p>
+    <div class="cart-icon">🛒 View Product</div>
+  </a>
+</div>
 
       <div class="product">
+        <a href="arsenal-jersey-page.html">
         <img src="catalog photos/arsenal.jpg" alt="Arsenal">
         <p>Arsenal Adult 2024-25 Home Jersey</p>
         <p class="price">$115.00</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
+        <div class="cart-icon">🛒 View Product</div>
+            </a>
       </div>
 
       <div class="product">
+        <a href="aston-villa-page.html">
         <img src="catalog photos/AVL.jpg" alt="AVL">
         <p>Aston Villa 2024-25 Home Jersey</p>
         <p class="price">$115.00</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
+         <div class="cart-icon">🛒 View Product</div>
+            </a>
       </div>
 
       <!-- Row 2: Boots -->
       <div class="product">
+        <a href="mercurial-zoom-boot-page.html">
         <img src="catalog photos/mercurial.jpg" alt="mercurial">
         <p>Mercurial Zoom Superfly 10 Elite SE FG - Air Max 95</p>
         <p class="price">$349.00</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
+        <div class="cart-icon">🛒 View Product</div>
+            </a>
       </div>
 
       <div class="product">
+        <a href="mercurial-zoom-vapor-boot-page.html">
         <img src="catalog photos/mercurials.jpg" alt="mercurials">
         <p>Mercurial Zoom Vapor 16 Academy FG/MG 'Mad Ambition Pack'</p>
         <p class="price">$109</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
+        <div class="cart-icon">🛒 View Product</div>
+            </a>
       </div>
 
       <div class="product">
+        <a href="mercurial-zoom-kylian-mbappe-boot-page.html">
         <img src="catalog photos/mbappe.jpg" alt="mbappe">
         <p>Mercurial Zoom Vapor 16 Pro FG 'Kylan Mbappe'</p>
         <p class="price">$219.00</p>
-        <button class="cart-icon">🛒 Add to Cart</button>
+        <div class="cart-icon">🛒 View Product</div>
+            </a>
       </div>
 
       <!-- Row 3: Extras / Mixed -->

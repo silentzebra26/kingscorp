@@ -16,62 +16,55 @@
       color: #333;
     }
 
-    .logo {
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-right: auto;
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 60px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
     }
 
-      .navbar {
-  position: sticky;
-  top: 0;
-  background: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  height: 60px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
+    .logo img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
 
-.logo img {
-  height: 40px;
-  width: auto;
-  display: block;
-}
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 30px;
-}
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      padding: 8px 0;
+      position: relative;
+    }
 
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  padding: 8px 0;
-  position: relative;
-}
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: white;
+      left: 0;
+      bottom: -4px;
+      transition: 0.3s ease width;
+    }
 
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: white;
-  left: 0;
-  bottom: -4px;
-  transition: 0.3s ease width;
-}
-
-.nav-links a:hover::after,
-.nav-links a:focus::after {
-  width: 100%;
-}
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
     .container {
-      max-width: 1100px;
+      max-width: 600px;
       margin: 3rem auto;
       padding: 2rem;
       background-color: white;
@@ -87,12 +80,17 @@
     }
 
     form {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
+      flex-direction: column;
       gap: 1.5rem;
     }
 
-    input, textarea {
+    label {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    input, textarea, select {
       width: 100%;
       padding: 0.9rem;
       border: 1px solid #ccc;
@@ -102,8 +100,8 @@
       transition: border 0.2s ease;
     }
 
-    input:focus, textarea:focus {
-      border-color: #888;
+    input:focus, textarea:focus, select:focus {
+      border-color: #0052cc;
       outline: none;
       background-color: #fff;
     }
@@ -111,10 +109,6 @@
     textarea {
       resize: vertical;
       height: 120px;
-    }
-
-    .full-width {
-      grid-column: span 2;
     }
 
     .submit-btn {
@@ -133,39 +127,63 @@
       background-color: #333;
     }
 
-    @media (max-width: 700px) {
-      .full-width {
-        grid-column: span 1;
-      }
+    .contact-info {
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-   <div class="navbar">
-    <div class="logo">
-      <img src="kingscorpp.png" alt="Kings Corp Logo" />
-    </div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="catalog.html">Catalogue</a>
-      <a href="#">About</a>
-      <a href="contactus.html">Contact</a>
+    <div class="navbar">
+      <div class="logo">
+        <img src="kingscorpp.png" alt="Kings Corp Logo" />
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalogue</a>
+        <a href="#">About</a>
+        <a href="contactus.html">Contact</a>
+      </div>
     </div>
   </header>
 
   <div class="container">
     <h2>Customer Feedback Form</h2>
     <form action="Thankyou.html" method="get">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="text" name="issue" placeholder="Issue" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Your phone number" required>
-      <textarea name="details" placeholder="Tell us more about your issue" class="full-width" required></textarea>
-		<h5> Contact us at </br> Phone : 91015646 </br> Email : kingscorp@gmail.com </h5>
-      <button type="submit" class="submit-btn full-width">Submit Feedback</button>
+      <label for="name">Name*</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+      <label for="phone">Phone Number*</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+      <label for="issue">Issue*</label>
+      <select id="issue" name="issue" required>
+        <option value="" disabled selected>Select an issue</option>
+        <option value="Shipping">Shipping</option>
+        <option value="Product Quality">Product Quality</option>
+        <option value="Payment">Payment</option>
+        <option value="Customer Service">Customer Service</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="details">Tell us more about your issue*</label>
+      <textarea id="details" name="details" placeholder="Please describe the issue in detail" required></textarea>
+
+      <button type="submit" class="submit-btn">Submit Feedback</button>
     </form>
+
+    <div class="contact-info">
+      Contact us at: <br>
+      📞 Phone: 91015646 <br>
+      📧 Email: kingscorp@gmail.com
+    </div>
   </div>
 
 </body>

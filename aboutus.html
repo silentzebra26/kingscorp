@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Kings Corp</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 60px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      padding: 8px 0;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: white;
+      left: 0;
+      bottom: -4px;
+      transition: 0.3s ease width;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #111;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: #f0f0f0;
+      padding: 0.9rem 1.1rem;
+      border-radius: 8px;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .store-photos img,
+    .news-logos img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .store-photos, .news-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+      margin-top: 1rem;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+
+    .social-icons img:hover {
+      filter: grayscale(0%);
+    }
+
+    @media (max-width: 768px) {
+      .social-icons {
+        justify-content: center;
+      }
+      .store-photos img,
+      .news-logos img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="kingscorpp.png" alt="Kings Corp Logo" />
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalogue</a>
+        <a href="about.html">About</a>
+        <a href="contactus.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Our Story -->
+    <section>
+      <h2>Our Story</h2>
+      <p>
+       Kings Corp was born out of our shared passion for football. As football lovers ourselves — Lashira, Eldrick, Shengkai, and Gad — we noticed how hard it was for people our age to find authentic, high-quality football merchandise without breaking the bank or worrying about fakes.
+Whether it was jerseys, boots, or fan gear, we constantly struggled to find trusted stores that catered to the younger generation with style, price, and reliability. That frustration turned into inspiration — and that's when Kings Corp was created.
+What started as just four friends with a dream and a small online shop has now grown into a brand that connects real fans with real gear. We're proud to make it easier for others to wear what they love and represent the sport that brings us all together.
+      </p>
+    </section>
+
+    <!-- What We Offer -->
+    <section>
+      <h2>What We Offer</h2>
+      <p>
+    At Kings Corp, we offer a wide range of football essentials — from official jerseys and boots to cleats, training gear, and more. Whether you’re a casual fan or a serious player, we’ve got the gear to match your passion for the game.
+      </p>
+    </section>
+
+    <!-- Opening Hours -->
+    <section>
+      <h2>Store Opening Hours</h2>
+      <ul>
+        <li>Monday – Sunday: 9:00 AM – 10:00 PM</li>
+      </ul>
+    </section>
+
+    <!-- Store Photos -->
+    <section>
+      <h2>Our Store</h2>
+      <div class="store-photos">
+        <img src="https://via.placeholder.com/300x200?text=Store+Photo+1" alt="Store Photo 1">
+        <img src="https://via.placeholder.com/300x200?text=Store+Photo+2" alt="Store Photo 2">
+      </div>
+    </section>
+
+    <!-- Fake News -->
+    <section>
+      <h2>Featured In</h2>
+      <div class="news-logos">
+        <img src="https://via.placeholder.com/300x150?text=BuzzBiz+Weekly" alt="BuzzBiz Weekly">
+        <img src="https://via.placeholder.com/300x150?text=Trend+Today" alt="Trend Today">
+        <img src="https://via.placeholder.com/300x150?text=Cool+Stuff+Times" alt="Cool Stuff Times">
+      </div>
+    </section>
+
+    <!-- Social Media -->
+    <section>
+      <h2>Follow Us</h2>
+      <div class="social-icons">
+        <a href="https://instagram.com/kingscorp" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Icon">
+        </a>
+        <a href="https://facebook.com/kingscorp" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook Icon">
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

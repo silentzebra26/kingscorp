@@ -1,13 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
-
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-
-
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .navbar {
   position: sticky;
@@ -19,27 +18,27 @@ body {
   padding: 0 40px;
   height: 60px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000; }
-
+  z-index: 1000;
+}
 
 .logo img {
   height: 40px;
   width: auto;
-  display: block; }
-
+  display: block;
+}
 
 .nav-links {
   display: flex;
-  gap: 30px; }
-
+  gap: 30px;
+}
 
 .nav-links a {
   text-decoration: none;
   color: white;
   font-weight: 600;
   padding: 8px 0;
-  position: relative; }
-
+  position: relative;
+}
 
 .nav-links a::after {
   content: "";
@@ -49,28 +48,27 @@ body {
   background: white;
   left: 0;
   bottom: -4px;
-  transition: 0.3s ease width; }
-
+  transition: 0.3s ease width;
+}
 
 .nav-links a:hover::after,
 .nav-links a:focus::after {
-  width: 100%; }
-
-
+  width: 100%;
+}
 
 .main-container {
   background-color: blue;
   position: relative;
   overflow: hidden;
   height: 80vh;
-  padding: 0; }
-
+  padding: 0;
+}
 
 .main-container video {
   width: 100%;
   height: 100%;
-  object-fit: cover; }
-
+  object-fit: cover;
+}
 
 .ad-text {
   position: absolute;
@@ -79,39 +77,58 @@ body {
   color: white;
   font-size: 32px;
   font-weight: bold;
-  text-shadow: 2px 2px 4px black; }
+  text-shadow: 2px 2px 4px black;
+}
 
+/* Removed promo-banner */
 
-
-.promo-banner {
-  width: 100%;
-  margin-top: 20px;
+/* Popular Products Section */
+.popular-products {
+  padding: 40px 20px;
+  background: #f4f4f4;
   text-align: center;
-  background-color: #f9f9f9; }
+}
 
+.popular-products h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #222;
+}
 
-.promo-banner img {
-  width: 100%;
-  max-width: 100%;
+.product-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product-row a img {
+  width: 160px;
   height: auto;
-  display: block; }
+  border-radius: 10px;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-
+.product-row a img:hover {
+  transform: scale(1.05);
+}
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 0 20px; }
-  
+    padding: 0 20px;
+  }
 
   .nav-links {
-    gap: 15px; }
-  
+    gap: 15px;
+  }
 
   .main-container {
-    height: 40vh; }
-  
+    height: 40vh;
+  }
 
   .ad-text {
-    font-size: 20px; }
-  
+    font-size: 20px;
+  }
 }
+

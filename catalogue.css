@@ -250,3 +250,40 @@ body {
   font-weight: bold;
   font-size: 13px;
 }
+
+.review-section {
+  margin: 60px 40px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.review-section h3 {
+  font-size: 24px;
+  color: #111;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.review {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.review:last-child {
+  border-bottom: none;
+}
+
+.review-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.review p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}

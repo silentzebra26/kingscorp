@@ -118,6 +118,12 @@ body {
 .price {
   font-weight: bold;
   color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  margin: 10px 0;
 }
 
 .cart-icon {
@@ -219,7 +225,7 @@ body {
 }
 
 .rating .stars {
-  color: #f5a623; /* orange/yellow star color */
+  color: #f5a623;
   font-size: 14px;
   letter-spacing: 1px;
 }

@@ -157,4 +157,13 @@
   font-weight: bold;
   color: #111;
 }
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-link:hover .product {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 

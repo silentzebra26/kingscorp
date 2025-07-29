@@ -291,3 +291,18 @@ body {
 #logoutBtn:hover {
   background-color: darkred;
 }
+
+#auth-buttons a {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+#auth-buttons a:hover {
+  background-color: #444;
+}

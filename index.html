@@ -5,7 +5,7 @@
   <title>Kings Corp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="index.css" />
-  <script src="auth.js" defer></script> <!-- This is where you include the JS -->
+  <script src="auth.js" defer></script>
 </head>
 <body>
 
@@ -15,17 +15,13 @@
       <img src="kingscorpp.png" alt="Kings Corp Logo" />
     </div>
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="catalog.html">Catalogue</a>
-      <a href="aboutus.html">About</a>
-      <a href="contactus.html">Contact</a>
-
-       <span id="auth-buttons">
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
-      </span>
-
-      <button id="logoutBtn" style="display:none;">Logout</button>
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="catalog.html" class="nav-btn">Catalogue</a>
+      <a href="aboutus.html" class="nav-btn">About</a>
+      <a href="contactus.html" class="nav-btn">Contact</a>
+      <a href="login.html" id="loginLink" class="nav-btn">Login</a>
+      <a href="signup.html" id="signupLink" class="nav-btn">Sign Up</a>
+      <a href="#" id="logoutLink" class="nav-btn" style="display: none;">Logout</a>
     </div>
   </div>
 
@@ -35,37 +31,6 @@
       <source src="nikeads.mp4" type="video/mp4" />
     </video>
     <div class="ad-text">Nike Ads</div>
-  </div>
-
-  <!-- Popular Products -->
-  <div class="popular-products">
-    <h2>Popular Products</h2>
-    <div class="product-grid">
-      <div class="product">
-        <a href="aston-villa-page.html" class="product-link">
-          <img src="catalog photos/AVL.jpg" alt="Aston Villa Jersey" />
-          <p>Aston Villa 2024-25 Home Jersey</p>
-          <p class="price">$115.00</p>
-          <div class="cart-icon">🛒 View Product</div>
-        </a>
-      </div>
-      <div class="product">
-        <a href="Manchester-united-jersey-page.html" class="product-link">
-          <img src="catalog photos/man_u.jpg" alt="Manchester United Jersey" />
-          <p>Manchester United 2024-25 LS Home Jersey</p>
-          <p class="price">$199.90</p>
-          <div class="cart-icon">🛒 View Product</div>
-        </a>
-      </div>
-      <div class="product">
-        <a href="mercurial-zoom-boot-page.html" class="product-link">
-          <img src="catalog photos/mercurial.jpg" alt="Mercurial Boots" />
-          <p>Mercurial Zoom Superfly 10 Elite SE FG</p>
-          <p class="price">$349.00</p>
-          <div class="cart-icon">🛒 View Product</div>
-        </a>
-      </div>
-    </div>
   </div>
 
 </body>

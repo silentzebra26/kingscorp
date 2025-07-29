@@ -251,13 +251,9 @@ body {
   font-size: 13px;
 }
 
-.leave-review-row {
-  width: 100%;
-  padding: 40px 0;
-  background-color: #fff;
+.leave-review-button {
   text-align: center;
-  margin-top: 40px;
-  border-top: 1px solid #ddd;
+  margin: 40px 0;
 }
 
 .leave-review-button a {
@@ -265,10 +261,10 @@ body {
   background-color: #111;
   color: white;
   padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
   transition: background 0.3s;
 }
 

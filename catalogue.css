@@ -188,3 +188,18 @@ body {
 .rating-form button:hover {
   background-color: #444;
 }
+.price {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+}
+
+.discount-price {
+  color: #e60000;
+  font-weight: bold;
+}

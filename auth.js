@@ -23,3 +23,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Show/hide logout button based on login state
+document.addEventListener("DOMContentLoaded", () => {
+  const logoutLink = document.getElementById("logoutLink");
+  const isLoggedIn = localStorage.getItem("loggedIn");
+
+  if (logoutLink) {
+    if (isLoggedIn === "true") {
+      logoutLink.style.display = "inline-block";
+    } else {
+      logoutLink.style.display = "none";
+    }
+
+    logoutLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      localStorage.removeItem("loggedIn");
+      alert("You have been logged out.");
+      window.location.href = "login.html";
+    });
+  }
+});

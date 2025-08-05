@@ -1,4 +1,4 @@
- * {
+  * {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
@@ -67,6 +67,17 @@
 
 	.price {
 		font-size:3em
+	}
+	
+	.original-price {
+		text-decoration: line-through;
+		color: #999;
+		font-size:3em;
+	}
+	.discount-price {
+		color: #e60000;
+		font-weight: bold;
+		font-size:3em;
 	}
 	
 	.product-name {
@@ -233,4 +244,19 @@
 
 .container form .submit-btn:hover{
   background: #808080;
+}
+
+.rating-stars {
+  font-size: 1.3em;
+  margin-top: 5px;
+}
+
+.rating-stars .stars {
+  color: #f5a623;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }

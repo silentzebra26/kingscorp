@@ -1,4 +1,3 @@
-/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,12 +6,10 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: #fff;
   overflow-x: hidden;
 }
 
-/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -22,56 +19,42 @@ body {
   justify-content: space-between;
   padding: 0 40px;
   height: 60px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  margin: 0;
 }
 
 .logo img {
   height: 40px;
-  width: auto;
-  display: block;
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: white;
   font-weight: 600;
-  padding: 8px 0;
-  position: relative;
-  font-size: 16px;
-  width: 100px;
+  font-size: 14px;
+  padding: 10px 18px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  transition: 0.3s;
+  display: inline-block;
   text-align: center;
 }
 
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: white;
-  left: 0;
-  bottom: -4px;
-  transition: 0.3s ease width;
+.nav-links a:hover {
+  background-color: white;
+  color: black;
 }
 
-.nav-links a:hover::after,
-.nav-links a:focus::after {
-  width: 100%;
-}
-
-/* Video Ad Section */
 .main-container {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   position: relative;
   overflow: hidden;
-  background-color: black;
 }
 
 .main-container video {
@@ -90,114 +73,66 @@ body {
   text-shadow: 2px 2px 4px black;
 }
 
-/* Promo Banner (optional, can be removed if no longer used) */
-.promo-banner {
-  width: 100%;
-  margin-top: 20px;
-  text-align: center;
-  background-color: #f9f9f9;
-}
-
-.promo-banner img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Popular Products */
 .popular-products {
   padding: 40px 20px;
-  background: #f3f3f3;
+  background: #f4f4f4;
   text-align: center;
 }
 
 .popular-products h2 {
-  font-size: 28px;
   margin-bottom: 20px;
+  font-size: 28px;
+  color: #222;
 }
 
 .product-row {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 20px;
-}
-
-.product-link {
-  text-decoration: none;
-  color: inherit;
+  flex-wrap: wrap;
 }
 
 .product {
-  background: white;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  width: 200px;
+  padding: 15px;
   text-align: center;
+  transition: transform 0.2s;
+  width: 220px;
 }
 
 .product:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .product img {
   width: 100%;
-  height: auto;
-  border-radius: 4px;
+  height: 200px;
+  object-fit: contain;
   margin-bottom: 10px;
 }
 
-.product .price {
-  font-weight: bold;
-  color: #e60000;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0 20px;
-  }
-
-  .nav-links {
-    gap: 15px;
-  }
-
-  .main-container {
-    height: 50vh;
-  }
-
-  .ad-text {
-    font-size: 20px;
-  }
-
-  .product-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .product {
-    width: 90%;
-  }
+.product p {
+  color: #333;
+  margin: 5px 0;
 }
 
 #snackbar {
   visibility: hidden;
   min-width: 250px;
+  margin-left: -125px;
   background-color: #333;
   color: #fff;
   text-align: center;
   border-radius: 8px;
   padding: 16px;
   position: fixed;
-  z-index: 1000;
+  z-index: 1001;
   left: 50%;
   bottom: 30px;
-  transform: translateX(-50%);
   font-size: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 #snackbar.show {
@@ -214,4 +149,3 @@ body {
   from { bottom: 30px; opacity: 1; }
   to { bottom: 0; opacity: 0; }
 }
-

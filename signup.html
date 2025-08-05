@@ -1,23 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Signup</title>
-  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <title>Sign Up - Kings Corp</title>
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    body, html {
+      height: 100%;
+      background: #f0f2f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 20px;
+    }
+    .form-container {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .form-container h2 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 12px 0 24px 0;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+      box-sizing: border-box;
+    }
+    input[type="text"]:focus, input[type="password"]:focus {
+      border-color: #0077ff;
+      outline: none;
+    }
+    button {
+      background-color: #0077ff;
+      color: white;
+      border: none;
+      padding: 14px 0;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #005bb5;
+    }
+    .login-link {
+      margin-top: 18px;
+      font-size: 14px;
+      color: #666;
+    }
+    .login-link a {
+      color: #0077ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <div class="form-container">
-    <h2>Signup</h2>
+    <h2>Create your Kings Corp account</h2>
     <form onsubmit="signup(event)">
-      <input type="text" id="signup-username" placeholder="Username" required>
-      <input type="password" id="signup-password" placeholder="Password" required>
-      <button type="submit">Signup</button>
+      <input type="text" id="signup-username" placeholder="Choose a username" required />
+      <input type="password" id="signup-password" placeholder="Choose a password" required />
+      <button type="submit">Sign Up</button>
     </form>
+    <div class="login-link">
+      Already have an account? <a href="login.html">Login here</a>
+    </div>
   </div>
+
   <script>
     function signup(e) {
       e.preventDefault();
-      const username = document.getElementById("signup-username").value;
+      const username = document.getElementById("signup-username").value.trim();
+      if (username.length === 0) {
+        alert("Please enter a username.");
+        return;
+      }
       localStorage.setItem("user", username);
       window.location.href = "index.html?action=signup";
     }

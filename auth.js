@@ -1,46 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const loginLink = document.getElementById("loginLink");
-  const signupLink = document.getElementById("signupLink");
-  const logoutLink = document.getElementById("logoutLink");
+  const logoutBtn = document.getElementById("logoutBtn");
 
-  const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+  const user = localStorage.getItem("user");
 
-  if (isLoggedIn) {
-    loginLink.style.display = "none";
-    signupLink.style.display = "none";
-    logoutLink.style.display = "inline-block";
+  if (user) {
+    document.getElementById("loginBtn").style.display = "none";
+    document.getElementById("signupBtn").style.display = "none";
+    if (logoutBtn) logoutBtn.style.display = "inline-block";
   } else {
-    loginLink.style.display = "inline-block";
-    signupLink.style.display = "inline-block";
-    logoutLink.style.display = "none";
+    if (logoutBtn) logoutBtn.style.display = "none";
   }
 
-  if (logoutLink) {
-    logoutLink.addEventListener("click", () => {
-      localStorage.setItem("loggedIn", "false");
-      alert("You have been logged out.");
-      window.location.href = "index.html";
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("user");
+      showSnackbar("Logged out successfully!");
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 2000);
     });
   }
-});
 
-// Show/hide logout button based on login state
-document.addEventListener("DOMContentLoaded", () => {
-  const logoutLink = document.getElementById("logoutLink");
-  const isLoggedIn = localStorage.getItem("loggedIn");
+  // Snackbar display
+  const params = new URLSearchParams(window.location.search);
+  const action = params.get("action");
 
-  if (logoutLink) {
-    if (isLoggedIn === "true") {
-      logoutLink.style.display = "inline-block";
-    } else {
-      logoutLink.style.display = "none";
-    }
+  if (action === "login") {
+    showSnackbar("Logged in successfully!");
+  } else if (action === "signup") {
+    showSnackbar("Signed up successfully!");
+  }
 
-    logoutLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      localStorage.removeItem("loggedIn");
-      alert("You have been logged out.");
-      window.location.href = "login.html";
-    });
+  function showSnackbar(message) {
+    const sb = document.getElementById("snackbar");
+    sb.innerText = message;
+    sb.className = "show";
+    setTimeout(() => {
+      sb.className = sb.className.replace("show", "");
+    }, 3000);
   }
 });

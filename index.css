@@ -1,5 +1,18 @@
-/* ... existing CSS reset and body ... */
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -9,43 +22,56 @@
   justify-content: space-between;
   padding: 0 40px;
   height: 60px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  margin: 0;
 }
 
 .logo img {
   height: 40px;
   width: auto;
+  display: block;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
-.nav-links .nav-btn {
+.nav-links a {
   text-decoration: none;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
+  padding: 8px 0;
+  position: relative;
   font-size: 16px;
-  padding: 10px 16px;
-  background: transparent;
-  border: 2px solid transparent;
-  transition: 0.3s;
-  border-radius: 4px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100px;
+  text-align: center;
 }
 
-.nav-links .nav-btn:hover {
-  background-color: #444;
-  border-color: white;
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s ease width;
 }
 
-/* Main container & video section stays same */
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+  width: 100%;
+}
+
+/* Video Ad Section */
 .main-container {
-  background-color: blue;
+  width: 100vw;
+  height: 100vh;
   position: relative;
   overflow: hidden;
-  height: 80vh;
+  background-color: black;
 }
 
 .main-container video {
@@ -64,106 +90,128 @@
   text-shadow: 2px 2px 4px black;
 }
 
-
-.form-container {
-  max-width: 400px;
-  margin: 60px auto;
-  padding: 30px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background: #fdfdfd;
-  text-align: center;
-}
-
-.form-container h2 {
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.form-container form input {
+/* Promo Banner (optional, can be removed if no longer used) */
+.promo-banner {
   width: 100%;
-  padding: 10px 15px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
 }
 
-.form-container button {
-  padding: 10px 20px;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
+.promo-banner img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.form-container button:hover {
-  background: #444;
-}
-
+/* Popular Products */
 .popular-products {
   padding: 40px 20px;
-  background: #f4f4f4;
+  background: #f3f3f3;
   text-align: center;
 }
 
 .popular-products h2 {
-  margin-bottom: 20px;
   font-size: 28px;
-  color: #222;
+  margin-bottom: 20px;
 }
 
 .product-row {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 10px 0;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.product {
-  min-width: 200px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-.product:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.product img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  margin-bottom: 10px;
-  border-radius: 4px;
-}
-
-.product p {
-  margin: 6px 0;
-  color: #333;
-}
-
-.price {
-  font-weight: bold;
-  color: #111;
-}
 .product-link {
   text-decoration: none;
   color: inherit;
 }
 
-.product-link:hover .product {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.product {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  width: 200px;
+  text-align: center;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.product .price {
+  font-weight: bold;
+  color: #e60000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .main-container {
+    height: 50vh;
+  }
+
+  .ad-text {
+    font-size: 20px;
+  }
+
+  .product-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 90%;
+  }
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#snackbar.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from { bottom: 0; opacity: 0; }
+  to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { bottom: 30px; opacity: 1; }
+  to { bottom: 0; opacity: 0; }
 }
 

@@ -24,24 +24,27 @@
     </div>
   </div>
   <div class="organize">
-    <img src="catalog photos/manujersey.webp" width="512" height="512" class="image-container" alt="manujersey" />
+    <img src="catalog photos/manujersey.webp" width="512" height="512" class="image-container" alt="Manchester United Jersey" />
     <div>
-      <div class="brand-name">Adiddas</div>
+      <div class="brand-name">Adidas</div>
       <br />
-     <p class="product-name">Manchester United Adult 2024-25<br> 
-									Authentic LS Home Jersey</p>
-      <div class="price">$199.90</div>
+	<p class="product-name">Manchester United Adult 2024-25<br> 
+				Authentic LS Home Jersey</p>
+      <div class="price-container">
+		<div class="original-price">$199.90</div>
+		<div class="discount-price">$149.90</div>
+		</div>
       <br>
-      <form action="checkoutpage.html" method="get">
+      <form action="checkoutpage.html" method="post">
  						<div class="grid2x5">
-								<div><input type="radio" name="sizing" id="XS" required /><label for="XS"> XS</label></div>
-							<div><input type="radio" name="sizing" id="S" required /><label for="S"> S</label></div>
-							<div><input type="radio" name="sizing" id="M" required /><label for="M"> M</label></div>
-							<div><input type="radio" name="sizing" id="L" required /><label for="L"> L</label></div>
-							<div><input type="radio" name="sizing" id="XL" required /><label for="XL"> XL</label></div>
-							<div><input type="radio" name="sizing" id="2XL" required /><label for="2XL"> 2XL</label></div>
-							<div><input type="radio" name="sizing" id="3XL" required /><label for="3XL"> 3XL</label></div>
-							<div><input type="radio" name="sizing" id="4XL" required /><label for="4XL"> 4XL</label></div>
+							<div><input type="radio" name="sizing" id="XS" required /><label for="XS">XS</label></div>
+							<div><input type="radio" name="sizing" id="S" required /><label for="S">S</label></div>
+							<div><input type="radio" name="sizing" id="M" required /><label for="M">M</label></div>
+							<div><input type="radio" name="sizing" id="L" required /><label for="L">L</label></div>
+							<div><input type="radio" name="sizing" id="XL" required /><label for="XL">XL</label></div>
+							<div><input type="radio" name="sizing" id="2XL" required /><label for="2XL">2XL</label></div>
+							<div><input type="radio" name="sizing" id="3XL" required /><label for="3XL">3XL</label></div>
+							<div><input type="radio" name="sizing" id="4XL" required /><label for="4XL">4XL</label></div>
 						</div>
 
         <div class="counter">
@@ -49,7 +52,10 @@
 			<input type="text" value="1" />
           <span class="up" onclick="increaseCount(event, this)">+</span>
         </div>
-	
+	<br>
+	<div class="rating-stars">
+	<span class="stars">★★★★★</span> <span class="review-count">5.0 (243 reviews)</span>
+	</div>
 	
         <br />
 			<button type="submit" class="buy-button">Buy now</button>
@@ -69,6 +75,8 @@
 				authentic version includes ventilating HEAT.RDY and lightweight details for confident<Br>
 				football.This product is made with 100% recycled materials. By reusing materials that have<br>
 				already been created, we help to reduce waste and our reliance on finite resources and<br>
+				
+	</div>
   <script>
     function increaseCount(e, el) {
       const input = el.previousElementSibling;
@@ -86,4 +94,3 @@
   </script>
 </body>
 </html>
-

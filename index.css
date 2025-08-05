@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Reset and basic styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +7,10 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff;
-  overflow-x: hidden;
+  background-color: #f4f4f4;
 }
 
-/* Navbar - original design kept exactly */
+/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -35,117 +34,92 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: 600;
   font-size: 14px;
-  padding: 10px 18px;
-  background: transparent;
-  border: 1px solid white;
-  border-radius: 4px;
+  padding: 10px 20px;
+  background: white;
+  border: none;
+  border-radius: 20px;
   transition: 0.3s;
   display: inline-block;
   text-align: center;
 }
 
 .nav-links a:hover {
-  background-color: white;
+  background-color: #e0e0e0;
   color: black;
 }
 
-/* Main container with video - updated for perfect fit */
-.main-container {
-  width: 100vw;
-  height: 80vh;
+/* Video Banner */
+.video-container {
   position: relative;
-  overflow: hidden; /* prevent scrollbars */
-  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  max-height: 600px;
 }
 
-.main-container video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
+.video-container video {
+  width: 100%;
   height: auto;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
+  display: block;
 }
 
-/* Ad text on video */
-.ad-text {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: white;
-  font-size: 32px;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px black;
-}
-
-/* Popular products section */
+/* Popular Products Section */
 .popular-products {
   padding: 40px 20px;
-  background: #f4f4f4;
   text-align: center;
 }
 
 .popular-products h2 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 28px;
-  color: #222;
 }
 
-.product-row {
-  display: flex;
-  justify-content: center;
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
 }
 
-.product {
-  background: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+.product-item {
+  background: white;
+  border-radius: 10px;
   padding: 15px;
-  text-align: center;
-  transition: transform 0.2s;
-  width: 220px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.product:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.product img {
+.product-item img {
   width: 100%;
-  height: 200px;
-  object-fit: contain;
-  margin-bottom: 10px;
+  height: auto;
+  border-radius: 8px;
 }
 
-.product p {
+.product-item h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.product-item p {
+  font-size: 14px;
   color: #333;
-  margin: 5px 0;
 }
 
-/* Snackbar styling */
+/* Snackbar */
 #snackbar {
   visibility: hidden;
   min-width: 250px;
-  margin-left: -125px;
   background-color: #333;
   color: #fff;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 2px;
   padding: 16px;
   position: fixed;
   z-index: 1001;
   left: 50%;
   bottom: 30px;
-  font-size: 16px;
+  transform: translateX(-50%);
+  font-size: 14px;
 }
 
 #snackbar.show {
@@ -162,5 +136,47 @@ body {
   from { bottom: 30px; opacity: 1; }
   to { bottom: 0; opacity: 0; }
 }
+
+/* Form Pages (Login/Signup) */
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-container button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #333;
+}
+
 
 

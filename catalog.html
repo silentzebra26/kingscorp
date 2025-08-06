@@ -443,11 +443,34 @@
    
       <div class="leave-review-row">
   <div class="leave-review-button">
-    <a href="leave-review.html">✨ Leave Your Review</a>
+    <a href="#review-form">✨ Leave Your Review</a>
   </div>
 </div>
-    
+
+    <div id="review-form" class="review-form-container">
+  <h3>Leave Your Review</h3>
+  <form>
+    <label for="product">Product Name:</label><br>
+    <input type="text" id="product" name="product" placeholder="e.g., Manchester United Jersey" required><br><br>
+
+    <label for="rating">Rating (1–5 stars):</label><br>
+    <select id="rating" name="rating" required>
+      <option value="">Select</option>
+      <option value="5">★★★★★</option>
+      <option value="4">★★★★☆</option>
+      <option value="3">★★★☆☆</option>
+      <option value="2">★★☆☆☆</option>
+      <option value="1">★☆☆☆☆</option>
+    </select><br><br>
+
+    <label for="comments">Your Comments:</label><br>
+    <textarea id="comments" name="comments" rows="4" placeholder="Write something..." required></textarea><br><br>
+
+    <button type="submit">Submit Review</button>
+  </form>
+</div>
 
     </body>
     </html>
+
 

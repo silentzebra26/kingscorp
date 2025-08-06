@@ -1,4 +1,4 @@
-/* Reset and Base */
+/* General Styles */
 body {
   margin: 0;
   padding: 0;
@@ -6,19 +6,6 @@ body {
   background: #f0f0f0;
   width: 100vw;
   overflow-x: hidden;
-}
-
-/* Responsive Grid */
-@media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Navbar */
@@ -69,11 +56,14 @@ body {
   width: 100%;
 }
 
-/* Cart Icon */
 .cart-link {
   display: flex;
   align-items: center;
   padding-left: 15px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1001;
 }
 
 .cart-link svg {
@@ -109,7 +99,25 @@ body {
   padding: 20px 40px;
 }
 
-/* Product Cards */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Product Card */
 .product {
   background: white;
   border: 1px solid #ccc;
@@ -133,25 +141,22 @@ body {
   margin-bottom: 10px;
 }
 
-/* Title */
-.product-title {
-  font-weight: bold;
-  font-size: 16px;
+.product-title,
+.product p {
+  margin: 5px 0;
   color: #333;
-  margin: 8px 0;
-  text-align: center;
+  font-weight: 500;
 }
 
 /* Price Styling */
 .price {
+  font-size: 16px;
+  margin: 10px 0;
   font-weight: bold;
-  color: #111;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6px;
-  font-size: 16px;
-  margin: 10px 0;
 }
 
 .original-price {
@@ -164,7 +169,7 @@ body {
   font-weight: bold;
 }
 
-/* Personalisation Label */
+/* Review and Ratings */
 .review-label {
   color: #0071ce;
   font-size: 13px;
@@ -172,7 +177,6 @@ body {
   margin-top: 6px;
 }
 
-/* Ratings */
 .rating {
   display: flex;
   align-items: center;
@@ -192,7 +196,7 @@ body {
   font-size: 13px;
 }
 
-/* Add to Cart Button */
+/* Cart Button */
 .cart-icon {
   margin-top: 10px;
   padding: 10px 15px;
@@ -209,17 +213,19 @@ body {
   background-color: #444;
 }
 
-/* Link Wrapping the Product */
+/* Product Link Wrapper */
 .product a.product-link {
   text-decoration: none;
   color: inherit;
   display: block;
 }
 
-/* Leave Review Section */
-.leave-review-button {
-  text-align: center;
+/* Leave Review */
+.leave-review-row {
+  width: 100%;
   margin: 40px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .leave-review-button a {
@@ -235,49 +241,5 @@ body {
 }
 
 .leave-review-button a:hover {
-  background-color: #444;
-}
-
-/* Review Form (if used) */
-.review-form-container {
-  background-color: #fff;
-  padding: 30px;
-  margin: 40px auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  max-width: 600px;
-}
-
-.review-form-container h3 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.review-form-container input,
-.review-form-container select,
-.review-form-container textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-family: inherit;
-  font-size: 14px;
-}
-
-.review-form-container button {
-  background-color: #111;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 10px;
-  width: 100%;
-  font-size: 15px;
-}
-
-.review-form-container button:hover {
   background-color: #444;
 }

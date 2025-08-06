@@ -1,15 +1,13 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff;
-  overflow-x: hidden;
-}
+  * {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+    }
+	body {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		background-color: #f4f4f4;
+		color: #333;
+    }
 
 /* Navbar */
 .navbar {
@@ -26,6 +24,7 @@ body {
 
 .logo img {
   height: 40px;
+  width: auto;
 }
 
 .nav-links {
@@ -33,28 +32,22 @@ body {
   gap: 20px;
 }
 
-/* Set color for all link states to white */
-.nav-links a,
-.nav-links a:visited,
-.nav-links a:active,
-.nav-links a:focus {
-  color: white;
+.nav-links .nav-btn {
   text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 10px 18px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 16px;
   background: transparent;
-  border: 1px solid white;
-  border-radius: 4px;
+  border: 2px solid transparent;
   transition: 0.3s;
-  display: inline-block;
-  text-align: center;
+  border-radius: 4px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Hover effect */
-.nav-links a:hover {
-  background-color: white;
-  color: black;
+.nav-links .nav-btn:hover {
+  background-color: #444;
+  border-color: white;
 }
 
 /* Main container with video */
@@ -167,3 +160,4 @@ body {
   from { bottom: 30px; opacity: 1; }
   to { bottom: 0; opacity: 0; }
 }
+

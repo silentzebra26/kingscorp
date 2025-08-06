@@ -1,13 +1,15 @@
-  * {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-    }
-	body {
-		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-		background-color: #f4f4f4;
-		color: #333;
-    }
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
+}
 
 /* Navbar */
 .navbar {
@@ -24,7 +26,6 @@
 
 .logo img {
   height: 40px;
-  width: auto;
 }
 
 .nav-links {
@@ -32,22 +33,28 @@
   gap: 20px;
 }
 
-.nav-links .nav-btn {
+/* Set color for all link states to white */
+.nav-links a,
+.nav-links a:visited,
+.nav-links a:active,
+.nav-links a:focus {
+  color: white;
   text-decoration: none;
-  color: white !important;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 18px;
   background: transparent;
-  border: 2px solid transparent;
-  transition: 0.3s;
+  border: 1px solid white;
   border-radius: 4px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: 0.3s;
+  display: inline-block;
+  text-align: center;
 }
 
-.nav-links .nav-btn:hover {
-  background-color: #444;
-  border-color: white;
+/* Hover effect */
+.nav-links a:hover {
+  background-color: white;
+  color: black;
 }
 
 /* Main container with video */
@@ -160,4 +167,3 @@
   from { bottom: 30px; opacity: 1; }
   to { bottom: 0; opacity: 0; }
 }
-

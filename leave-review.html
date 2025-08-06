@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Leave Your Review - Kings Corp</title>
+  <link rel="stylesheet" href="catalogue.css" />
+  <style>
+    .review-form-container {
+      background-color: #fff;
+      padding: 30px;
+      margin: 60px auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+    }
+
+    .review-form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .review-form-container input,
+    .review-form-container select,
+    .review-form-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    .review-form-container button {
+      background-color: #111;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+      font-size: 15px;
+    }
+
+    .review-form-container button:hover {
+      background-color: #444;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      color: #111;
+      font-weight: bold;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="review-form-container">
+    <h2>Leave Your Review</h2>
+    <form>
+      <label for="product">Product Name:</label><br>
+      <input type="text" id="product" name="product" placeholder="e.g., Barcelona 2024-25 Jersey" required><br><br>
+
+      <label for="rating">Rating (1–5 stars):</label><br>
+      <select id="rating" name="rating" required>
+        <option value="">Select</option>
+        <option value="5">★★★★★</option>
+        <option value="4">★★★★☆</option>
+        <option value="3">★★★☆☆</option>
+        <option value="2">★★☆☆☆</option>
+        <option value="1">★☆☆☆☆</option>
+      </select><br><br>
+
+      <label for="comments">Your Comments:</label><br>
+      <textarea id="comments" name="comments" rows="4" placeholder="Write your review here..." required></textarea><br><br>
+
+      <button type="submit">Submit Review</button>
+    </form>
+
+    <div class="back-link">
+      <p><a href="catalog.html">⬅️ Back to Catalogue</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

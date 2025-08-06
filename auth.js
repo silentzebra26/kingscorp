@@ -1,18 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const logoutBtn = document.getElementById("logoutBtn");
+  const loginLink = document.getElementById("loginLink");
+  const signupLink = document.getElementById("signupLink");
+  const logoutLink = document.getElementById("logoutLink");
 
   const user = localStorage.getItem("user");
 
   if (user) {
-    document.getElementById("loginBtn").style.display = "none";
-    document.getElementById("signupBtn").style.display = "none";
-    if (logoutBtn) logoutBtn.style.display = "inline-block";
+    if (loginLink) loginLink.style.display = "none";
+    if (signupLink) signupLink.style.display = "none";
+    if (logoutLink) logoutLink.style.display = "inline-block";
   } else {
-    if (logoutBtn) logoutBtn.style.display = "none";
+    if (loginLink) loginLink.style.display = "inline-block";
+    if (signupLink) signupLink.style.display = "inline-block";
+    if (logoutLink) logoutLink.style.display = "none";
   }
 
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", () => {
+  if (logoutLink) {
+    logoutLink.addEventListener("click", (e) => {
+      e.preventDefault(); // prevent link jump
       localStorage.removeItem("user");
       showSnackbar("Logged out successfully!");
       setTimeout(() => {
@@ -21,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Snackbar display
+  // Snackbar display after login or signup
   const params = new URLSearchParams(window.location.search);
   const action = params.get("action");
 
@@ -31,12 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
     showSnackbar("Signed up successfully!");
   }
 
+  // Snackbar function
   function showSnackbar(message) {
     const sb = document.getElementById("snackbar");
-    sb.innerText = message;
-    sb.className = "show";
-    setTimeout(() => {
-      sb.className = sb.className.replace("show", "");
-    }, 3000);
+    if (sb) {
+      sb.innerText = message;
+      sb.className = "show";
+      setTimeout(() => {
+        sb.className = sb.className.replace("show", "");
+      }, 3000);
+    }
   }
 });

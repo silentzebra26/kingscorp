@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -20,28 +19,22 @@
       color: #222;
     }
 
-    .review-form-container input,
     .review-form-container select,
-    .review-form-container textarea {
+    .review-form-container textarea,
+    .review-form-container button {
       width: 100%;
       padding: 10px;
-      margin-top: 5px;
+      margin: 10px 0;
+      font-size: 14px;
       border-radius: 5px;
       border: 1px solid #ccc;
-      font-family: inherit;
-      font-size: 14px;
     }
 
     .review-form-container button {
       background-color: #111;
       color: white;
       border: none;
-      padding: 10px 15px;
-      border-radius: 6px;
       cursor: pointer;
-      margin-top: 10px;
-      width: 100%;
-      font-size: 15px;
     }
 
     .review-form-container button:hover {
@@ -50,7 +43,7 @@
 
     .back-link {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     .back-link a {
@@ -68,30 +61,100 @@
 
   <div class="review-form-container">
     <h2>Leave Your Review</h2>
-    <form>
-      <label for="product">Product Name:</label><br>
-      <input type="text" id="product" name="product" placeholder="e.g., Barcelona 2024-25 Jersey" required><br><br>
+    <form id="reviewForm">
+      <label for="category">Choose Category:</label>
+      <select id="category" required>
+        <option value="">-- Select Category --</option>
+        <option value="premier">Premier League</option>
+        <option value="laliga">La Liga</option>
+        <option value="bundesliga">Bundesliga</option>
+        <option value="ligue1">Ligue 1</option>
+        <option value="seriea">Serie A</option>
+        <option value="saudi">Saudi League</option>
+        <option value="boots">Football Boots</option>
+      </select>
 
-      <label for="rating">Rating (1–5 stars):</label><br>
-      <select id="rating" name="rating" required>
-        <option value="">Select</option>
+      <label for="product">Choose Product:</label>
+      <select id="product" required>
+        <option value="">-- Select a Product --</option>
+      </select>
+
+      <label for="rating">Rating:</label>
+      <select id="rating" required>
+        <option value="">-- Select Rating --</option>
         <option value="5">★★★★★</option>
         <option value="4">★★★★☆</option>
         <option value="3">★★★☆☆</option>
         <option value="2">★★☆☆☆</option>
         <option value="1">★☆☆☆☆</option>
-      </select><br><br>
+      </select>
 
-      <label for="comments">Your Comments:</label><br>
-      <textarea id="comments" name="comments" rows="4" placeholder="Write your review here..." required></textarea><br><br>
+      <label for="comments">Your Comments:</label>
+      <textarea id="comments" rows="4" placeholder="Write your review here..." required></textarea>
 
       <button type="submit">Submit Review</button>
     </form>
 
     <div class="back-link">
-      <p><a href="catalog.html">⬅️ Back to Catalogue</a></p>
+      <a href="catalog.html">⬅️ Back to Catalogue</a>
     </div>
   </div>
+
+  <script>
+    const categoryDropdown = document.getElementById("category");
+    const productDropdown = document.getElementById("product");
+
+    const products = {
+      premier: [
+        "Manchester United 2024-25 LS Home Jersey",
+        "Arsenal Adult 2024-25 Home Jersey",
+        "Aston Villa 2024-25 Home Jersey",
+        "Manchester City 2024-25 Home Jersey"
+      ],
+      laliga: [
+        "Real Madrid 2024-25 Home Jersey",
+        "Barcelona 2024-25 Home Jersey",
+        "Real Betis 2024-25 Home Jersey",
+        "FC Barcelona x Travis Scott Limited Edition Jersey 24/25"
+      ],
+      bundesliga: [
+        "Bayern Munchen 2024-25 Home Jersey",
+        "Borussia Dortmund 2024-25 Home Jersey",
+        "Bayer Leverkusen 2024-25 Home Jersey"
+      ],
+      ligue1: [
+        "Paris Saint Germain 2024-25 Home Jersey",
+        "Olympique Lyonnais 2024-25 Home Jersey",
+        "Olympique Marseille 2024-25 Home Jersey"
+      ],
+      seriea: [
+        "AC Milan 2024-25 Home Jersey",
+        "Inter 2024-25 Home Jersey",
+        "Juventus 2024-25 Home Jersey"
+      ],
+      saudi: [
+        "Al Nassr 2024-25 Home Jersey"
+      ],
+      boots: [
+        "Mercurial Zoom Superfly 10 Elite SE FG - Air Max 95",
+        "Mercurial Zoom Vapor 16 Academy FG/MG 'Mad Ambition Pack'",
+        "Mercurial Zoom Vapor 16 Pro FG 'Kylan Mbappe'"
+      ]
+    };
+
+    categoryDropdown.addEventListener("change", function () {
+      const selectedCategory = this.value;
+      const productList = products[selectedCategory] || [];
+
+      productDropdown.innerHTML = `<option value="">-- Select a Product --</option>`;
+      productList.forEach(product => {
+        const option = document.createElement("option");
+        option.value = product;
+        option.textContent = product;
+        productDropdown.appendChild(option);
+      });
+    });
+  </script>
 
 </body>
 </html>

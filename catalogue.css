@@ -272,4 +272,49 @@ body {
   background-color: #444;
 }
 
+.review-form-container {
+  background-color: #fff;
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+}
+
+.review-form-container h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.review-form-container input,
+.review-form-container select,
+.review-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.review-form-container button {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  font-size: 15px;
+}
+
+.review-form-container button:hover {
+  background-color: #444;
+}
+
+
+
 

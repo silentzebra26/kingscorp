@@ -94,13 +94,11 @@
         alert("Please enter your username.");
         return;
       }
-      localStorage.setItem("user", "example");
-      window.location.href = "index.html?action=login";
+      localStorage.setItem("user", username); // Store actual username
+      window.location.href = "index.html?action=login"; // Triggers snackbar on homepage
     }
   </script>
 </body>
 </html>
-
-
 
 

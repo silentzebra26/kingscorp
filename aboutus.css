@@ -101,7 +101,7 @@ body {
 
 .news-logos img {
   width: 100px;
-  height: auto;
+  height: 100px;
   object-fit: contain;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
@@ -146,3 +146,4 @@ body {
     margin-top: 10px;
   }
 }
+

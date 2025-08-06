@@ -177,6 +177,13 @@ body {
   background-color: #444;
 }
 
+.product-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333; /* make sure it's visible */
+  margin: 8px 0;
+  text-align: center;
+}
 /* Rating System */
 .rating-section {
   margin-top: 10px;
@@ -314,6 +321,7 @@ body {
 .review-form-container button:hover {
   background-color: #444;
 }
+
 
 
 

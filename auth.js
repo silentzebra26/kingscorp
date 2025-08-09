@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     logoutLink.addEventListener("click", (e) => {
       e.preventDefault(); // prevent link jump
       localStorage.removeItem("user");
-      showSnackbar("Logged out successfully!");
+      showSnackbar("Logged out");
       setTimeout(() => {
         window.location.href = "index.html";
       }, 2000);
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const action = params.get("action");
 
   if (action === "login") {
-    showSnackbar("Logged in successfully!");
+    showSnackbar("Logged in");
   } else if (action === "signup") {
     showSnackbar("Signed up successfully!");
   }

@@ -82,7 +82,7 @@
 
   <div class="review-form-container">
     <h2>Leave Your Review</h2>
-    <form id="reviewForm" action="thank-you.html" method="get">
+    <form id="reviewForm">
       <label for="category">Choose Category:</label>
       <select id="category" name="category" required>
         <option value="">-- Select Category --</option>
@@ -176,6 +176,14 @@
       });
     });
   </script>
+
+      <script>
+  document.getElementById('reviewForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    window.location.href = 'thank-you.html';
+  });
+</script>
 
 </body>
 </html>

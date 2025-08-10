@@ -1,3 +1,5 @@
+
+      <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -11,6 +13,7 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       max-width: 600px;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     .review-form-container h2 {
@@ -19,15 +22,23 @@
       color: #222;
     }
 
+    .review-form-container label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+
     .review-form-container select,
     .review-form-container textarea,
     .review-form-container button {
       width: 100%;
       padding: 10px;
-      margin: 10px 0;
+      margin-top: 5px;
       font-size: 14px;
       border-radius: 5px;
       border: 1px solid #ccc;
+      font-family: inherit;
     }
 
     .review-form-container button {
@@ -35,17 +46,21 @@
       color: white;
       border: none;
       cursor: pointer;
+      margin-top: 20px;
+      font-weight: 700;
+      transition: background 0.3s;
     }
 
     .review-form-container button:hover {
       background-color: #444;
     }
 
-    .rating .stars {
-  color: #f5a623;  
-  font-size: 14px;
-  letter-spacing: 1px;
-}
+    
+    #rating option {
+      color: #f5a623;
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
 
     .back-link {
       text-align: center;
@@ -67,9 +82,9 @@
 
   <div class="review-form-container">
     <h2>Leave Your Review</h2>
-    <form id="reviewForm">
+    <form id="reviewForm" action="thank-you.html" method="post">
       <label for="category">Choose Category:</label>
-      <select id="category" required>
+      <select id="category" name="category" required>
         <option value="">-- Select Category --</option>
         <option value="premier">Premier League</option>
         <option value="laliga">La Liga</option>
@@ -81,12 +96,12 @@
       </select>
 
       <label for="product">Choose Product:</label>
-      <select id="product" required>
+      <select id="product" name="product" required>
         <option value="">-- Select a Product --</option>
       </select>
 
       <label for="rating">Rating:</label>
-      <select id="rating" required>
+      <select id="rating" name="rating" required>
         <option value="">-- Select Rating --</option>
         <option value="5">★★★★★</option>
         <option value="4">★★★★☆</option>
@@ -96,7 +111,7 @@
       </select>
 
       <label for="comments">Your Comments:</label>
-      <textarea id="comments" rows="4" placeholder="Write your review here..." required></textarea>
+      <textarea id="comments" name="comments" rows="4" placeholder="Write your review here..." required></textarea>
 
       <button type="submit">Submit Review</button>
     </form>
